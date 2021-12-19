@@ -645,6 +645,8 @@ default_env() ->
      {"OBJCOPY", get_tool(Arch, "objcopy", "objcopy")},
      {"OBJDUMP", get_tool(Arch, "objdump", "objdump")},
 
+     {"LDFLAGS", "-fPIC $LDFLAGS"},
+
      {"DRV_CXX_TEMPLATE",
       "$CXX -c $CXXFLAGS $DRV_CFLAGS $PORT_IN_FILES -o $PORT_OUT_FILE"},
      {"DRV_CC_TEMPLATE",
